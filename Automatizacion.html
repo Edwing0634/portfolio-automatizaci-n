@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatización Proceso - Edwin González</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        .process-section {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        
+        .process-column {
+            flex: 1;
+            padding: 25px;
+            border-radius: 15px;
+            position: relative;
+        }
+        
+        .before {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            color: white;
+        }
+        
+        .after {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            color: white;
+        }
+        
+        .process-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .process-step {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid rgba(255,255,255,0.5);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateX(5px);
+        }
+        
+        .step-number {
+            position: absolute;
+            left: -12px;
+            top: 15px;
+            background: rgba(255,255,255,0.9);
+            color: #2c3e50;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+        
+        .arrow {
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3em;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .results {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .results-title {
+            font-size: 2em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .result-item {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .result-number {
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #f1c40f;
+            display: block;
+        }
+        
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        
+        .tech-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .tech-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .tech-item {
+            background: #3498db;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .process-section {
+                flex-direction: column;
+            }
+            .arrow {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Automatización de Procesos</h1>
+            <div class="subtitle">Transformación Digital - Reducción 92% Tiempo Operativo</div>
+            <div class="subtitle"><strong>Edwin González | Analista BI & Automatización</strong></div>
+        </div>
+        
+        <div class="process-section">
+            <div class="process-column before">
+                <div class="process-title">❌ PROCESO ANTERIOR</div>
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <strong>Acceso Manual a Sistemas</strong><br>
+                    Login múltiples plataformas
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <strong>Extracción Manual de Datos</strong><br>
+                    Copy/paste entre sistemas
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <strong>Organización en Excel</strong><br>
+                    Manipulación manual datos
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <strong>Validación y Cálculos</strong><br>
+                    Fórmulas manuales, revisión
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <strong>Distribución Manual</strong><br>
+                    Envío emails individuales
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <strong>Corrección de Errores</strong><br>
+                    Retrabajos constantes
+                </div>
+                <div style="text-align: center; margin-top: 20px; font-size: 1.3em;">
+                    ⏱️ <strong>6 HORAS DIARIAS</strong>
+                </div>
+            </div>
+            
+            <div class="arrow">→</div>
+            
+            <div class="process-column after">
+                <div class="process-title">✅ PROCESO AUTOMATIZADO</div>
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <strong>Programación Automática</strong><br>
+                    Ejecuta según cronograma
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <strong>SQL Procedure</strong><br>
+                    Extracción automática BD
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <strong>Bot Python</strong><br>
+                    Acceso y navegación automática
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <strong>Procesamiento Inteligente</strong><br>
+                    Validación y cálculos automáticos
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <strong>Distribución Automática</strong><br>
+                    Envío masivo inteligente
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <strong>Notificación Final</strong><br>
+                    Confirmación automática
+                </div>
+                <div style="text-align: center; margin-top: 20px; font-size: 1.3em;">
+                    ⚡ <strong>30 MINUTOS</strong>
+                </div>
+            </div>
+        </div>
+        
+        <div class="results">
+            <div class="results-title">📊 RESULTADOS OBTENIDOS</div>
+            <div class="results-grid">
+                <div class="result-item">
+                    <span class="result-number">92%</span>
+                    Reducción Tiempo Procesamiento
+                </div>
+                <div class="result-item">
+                    <span class="result-number">0</span>
+                    Errores Manuales
+                </div>
+                <div class="result-item">
+                    <span class="result-number">5.5h</span>
+                    Diarias Liberadas
+                </div>
+                <div class="result-item">
+                    <span class="result-number">100%</span>
+                    Confiabilidad Datos
+                </div>
+            </div>
+        </div>
+        
+        <div class="tech-stack">
+            <div class="tech-title">🛠️ Tecnologías Implementadas</div>
+            <div class="tech-items">
+                <div class="tech-item">SQL Server</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Selenium</div>
+                <div class="tech-item">APIs</div>
+                <div class="tech-item">VBA</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Edwin González | Especialista en Automatización de Procesos<br>
+            📧 edwing0634@gmail.com | 📱 314 317 8013 | 📍 Bogotá, Colombia
+        </div>
+    </div>
+</body>
+</html>
